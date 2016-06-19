@@ -1,6 +1,8 @@
 package tadakazu1972.activityrecorder;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -139,10 +141,10 @@ public class MainActivity extends AppCompatActivity {
                 setData("食事:普通");
             }
         });
-        mView.findViewById(R.id.btnEat3).setOnClickListener(new OnClickListener(){
+        mView.findViewById(R.id.btnOther).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                setData("食事:多い");
+                selectAction1();
             }
         });
         mView.findViewById(R.id.btnBicycle).setOnClickListener(new OnClickListener(){
@@ -216,6 +218,27 @@ public class MainActivity extends AppCompatActivity {
         DateFormat yyyymmddhhmm = new SimpleDateFormat("yyyy/MM/dd HH:mm"); //ミリ秒から String の yyyy/MM/dd HH:mm への変換
         String date = yyyymmddhhmm.format(new Date(nowTime));
         mDBHelper.insert(db, nowTime , date, s);
+    }
+
+    private void selectAction1(){
+        final CharSequence[] actions = {"風呂","トイレ","机で事務作業","テレビを見る","犬の散歩に行く"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
     }
 
     private void exportDB() {

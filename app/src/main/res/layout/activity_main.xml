@@ -144,11 +144,11 @@
             android:layout_weight="1"
             android:text="食事:普通"/>
         <Button
-            android:id="@+id/btnEat3"
+            android:id="@+id/btnOther"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="食事:多い"/>
+            android:text="その他"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
