@@ -75,112 +75,116 @@ public class MainActivity extends AppCompatActivity {
                 exportDB();
             }
         });
-        mView.findViewById(R.id.btnAwake).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("起床");
-            }
-        });
-        mView.findViewById(R.id.btnNap).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("昼寝");
-            }
-        });
-        mView.findViewById(R.id.btnSleep).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("就寝");
-            }
-        });
-        mView.findViewById(R.id.btnWalk1).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("歩く");
-            }
-        });
-        mView.findViewById(R.id.btnWalk2).setOnClickListener(new OnClickListener(){
-           @Override
-            public void onClick(View v){
-               setData("小走り");
-           }
-        });
-        mView.findViewById(R.id.btnRun).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-               setData("走る");
-           }
-        });
-        mView.findViewById(R.id.btnSit).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("座る");
-            }
-        });
-        mView.findViewById(R.id.btnStand).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("立つ");
-            }
-        });
-        mView.findViewById(R.id.btnLie).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("寝転ぶ");
-            }
-        });
-        mView.findViewById(R.id.btnEat1).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("食事:軽め");
-            }
-        });
-        mView.findViewById(R.id.btnEat2).setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v){
-                setData("食事:普通");
-            }
-        });
-        mView.findViewById(R.id.btnOther).setOnClickListener(new OnClickListener(){
+        mView.findViewById(R.id.btn1).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
                 selectAction1();
             }
         });
-        mView.findViewById(R.id.btnBicycle).setOnClickListener(new OnClickListener(){
+        mView.findViewById(R.id.btn2).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                setData("自転車");
+                selectAction2();
             }
         });
-        mView.findViewById(R.id.btnBike).setOnClickListener(new OnClickListener(){
+        mView.findViewById(R.id.btn3).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                setData("バイク");
+                setData("食事・飲食");
+                Toast.makeText(mActivity, "食事・飲食を入力しました。", Toast.LENGTH_LONG).show();
             }
         });
-        mView.findViewById(R.id.btnCar).setOnClickListener(new OnClickListener(){
+        mView.findViewById(R.id.btn4).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                setData("車");
+                selectAction4();
             }
         });
-        mView.findViewById(R.id.btnSports1).setOnClickListener(new OnClickListener(){
+        mView.findViewById(R.id.btn5).setOnClickListener(new OnClickListener(){
+           @Override
+            public void onClick(View v){
+               selectAction5();
+           }
+        });
+        mView.findViewById(R.id.btn6).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                setData("運動:軽め");
+               selectAction6();
+           }
+        });
+        mView.findViewById(R.id.btn7).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                selectAction7();
             }
         });
-        mView.findViewById(R.id.btnSports2).setOnClickListener(new OnClickListener(){
+        mView.findViewById(R.id.btn8).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                setData("運動:普通");
+                setData("家庭での学習活動");
+                Toast.makeText(mActivity, "家庭での学習活動を入力しました。", Toast.LENGTH_LONG).show();
             }
         });
-        mView.findViewById(R.id.btnSports3).setOnClickListener(new OnClickListener(){
+        mView.findViewById(R.id.btn9).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                setData("運動:激しい");
+                selectAction9();
+            }
+        });
+        mView.findViewById(R.id.btn10).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                selectAction10();
+            }
+        });
+        mView.findViewById(R.id.btn11).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                selectAction11();
+            }
+        });
+        mView.findViewById(R.id.btn12).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                selectAction12();
+            }
+        });
+        mView.findViewById(R.id.btn13).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                selectAction13();
+            }
+        });
+        mView.findViewById(R.id.btn14).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                selectAction14();
+            }
+        });
+        mView.findViewById(R.id.btn15).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                selectAction15();
+            }
+        });
+        mView.findViewById(R.id.btn16).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                setData("受診・診療");
+                Toast.makeText(mActivity, "受診・診療を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        mView.findViewById(R.id.btn17).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                selectAction17();
+            }
+        });
+        mView.findViewById(R.id.btn18).setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View v){
+                setData("その他");
+                Toast.makeText(mActivity, "その他を入力しました。", Toast.LENGTH_LONG).show();
             }
         });
         //listview
@@ -221,13 +225,300 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void selectAction1(){
-        final CharSequence[] actions = {"風呂","トイレ","机で事務作業","テレビを見る","犬の散歩に行く"};
+        final CharSequence[] actions = {"起床","就寝"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("活動を選択してください");
         builder.setItems(actions, new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialog, int which){
                 setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction2(){
+        final CharSequence[] actions = {"昼寝・うたた寝","休息","お茶・おやつ"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction4(){
+        final CharSequence[] actions = {"身じたく","洗面","入浴"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction5(){
+        final CharSequence[] actions = {"テレビ・ラジオの視聴","新聞・雑誌の購読"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction6(){
+        final CharSequence[] actions = {"読書","音楽・ビデオ鑑賞","楽器演奏","その他の趣味・習い事"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction7(){
+        final CharSequence[] actions = {"炊事","掃除","洗濯","ごみ捨て","その他の家事","庭作業","育児・家族の世話","子どもと遊ぶ"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction9(){
+        final CharSequence[] actions = {"買い物(歩行)","買い物(自転車)","犬の散歩","歩行","自転車","バス・電車","車・バイク"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction10(){
+        final CharSequence[] actions = {"通勤・通学(歩行)","通勤・通学(自転車)","通勤・通学(バス・電車)","通勤・通学(車・バイク)"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction11(){
+        final CharSequence[] actions = {"座業","立ち仕事"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction12(){
+        final CharSequence[] actions = {"授業","体育授業","学校行事","部・クラブ活動"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction13(){
+        final CharSequence[] actions = {"知人と会う","会食"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction14(){
+        final CharSequence[] actions = {"地域活動","PTA活動","冠婚葬祭","ボランティア"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction15(){
+        final CharSequence[] actions = {"観光","映画・美術鑑賞","娯楽施設","スポーツ観戦","その他の趣味","学習塾","習い事"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction17(){
+        final CharSequence[] actions = {"体操・ヨガ","散歩","速歩","ランニング","その他のスポーツ"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
             }
         });
         builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
@@ -293,7 +584,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setType("text/*");
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);//ファイル読み込む権限付与
         intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"tadakazu1972@gmail.com"});
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"okazaki@sports.osaka-cu.ac.jp"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "データ送信");
         intent.putExtra(Intent.EXTRA_TEXT, "データお送りします。");
         //ファイル添付

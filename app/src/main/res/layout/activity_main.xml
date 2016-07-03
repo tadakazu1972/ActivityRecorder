@@ -59,23 +59,23 @@
         android:orientation="horizontal"
         android:background="#5555cc">
         <Button
-            android:id="@+id/btnAwake"
+            android:id="@+id/btn1"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="起床"/>
+            android:text="睡眠"/>
         <Button
-            android:id="@+id/btnNap"
+            android:id="@+id/btn2"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="昼寝"/>
+            android:text="休憩"/>
         <Button
-            android:id="@+id/btnSleep"
+            android:id="@+id/btn3"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="就寝"/>
+            android:text="食事・飲食"/>
     </LinearLayout>
 
     <LinearLayout
@@ -84,23 +84,24 @@
         android:orientation="horizontal"
         android:background="#cc7799">
         <Button
-            android:id="@+id/btnWalk1"
+            android:id="@+id/btn4"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="歩く"/>
+            android:text="身の回りの用事"/>
         <Button
-            android:id="@+id/btnWalk2"
+            android:id="@+id/btn5"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="小走り"/>
+            android:text="テレビ・雑誌など"/>
         <Button
-            android:id="@+id/btnRun"
+            android:id="@+id/btn6"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="走る"/>
+            android:textSize="11dp"
+            android:text="家庭での趣味・習い事"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,23 +109,23 @@
         android:orientation="horizontal"
         android:background="#77cc99">
         <Button
-            android:id="@+id/btnSit"
+            android:id="@+id/btn7"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="座る"/>
+            android:text="家事・世話"/>
         <Button
-            android:id="@+id/btnStand"
+            android:id="@+id/btn8"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="立つ"/>
+            android:text="家庭での学習活動"/>
         <Button
-            android:id="@+id/btnLie"
+            android:id="@+id/btn9"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="寝転ぶ"/>
+            android:text="外出・移動"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -132,23 +133,23 @@
         android:orientation="horizontal"
         android:background="#ccaa11">
         <Button
-            android:id="@+id/btnEat1"
+            android:id="@+id/btn10"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="食事:軽め"/>
+            android:text="通勤・通学"/>
         <Button
-            android:id="@+id/btnEat2"
+            android:id="@+id/btn11"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="食事:普通"/>
+            android:text="仕事"/>
         <Button
-            android:id="@+id/btnOther"
+            android:id="@+id/btn12"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="その他"/>
+            android:text="学校での活動"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -156,23 +157,24 @@
         android:orientation="horizontal"
         android:background="#1199aa">
         <Button
-            android:id="@+id/btnBicycle"
+            android:id="@+id/btn13"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="自転車"/>
+            android:text="交際・付き合い"/>
         <Button
-            android:id="@+id/btnBike"
+            android:id="@+id/btn14"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="バイク"/>
+            android:text="社会参加活動"/>
         <Button
-            android:id="@+id/btnCar"
+            android:id="@+id/btn15"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="車"/>
+            android:textSize="10dp"
+            android:text="家庭外での趣味・習い事"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -180,22 +182,22 @@
         android:orientation="horizontal"
         android:background="#aa1111">
         <Button
-            android:id="@+id/btnSports1"
+            android:id="@+id/btn16"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="運動:軽め"/>
+            android:text="受診・診療"/>
         <Button
-            android:id="@+id/btnSports2"
+            android:id="@+id/btn17"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="運動:普通"/>
+            android:text="運動・スポーツ"/>
         <Button
-            android:id="@+id/btnSports3"
+            android:id="@+id/btn18"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="運動:激しい"/>
+            android:text="その他"/>
     </LinearLayout>
 </LinearLayout>
