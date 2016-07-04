@@ -7,7 +7,9 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -49,7 +51,12 @@ public class RecordView extends DialogFragment {
         int[] to = {R.id.text_date,R.id.text_activity};
         mActivity.mAdapter = new SimpleCursorAdapter(mActivity,R.layout.record_view,c,from,to,0);
         mListView.setAdapter(mActivity.mAdapter);
-
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+              //なにもしない　setOnItemClickListenerをいれないと、データアイテムをタップした時にアプリが落ちるのを防ぐため。
+            }
+        });
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("活動記録データ");
         ViewGroup parent = (ViewGroup)mListView.getParent();
