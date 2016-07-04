@@ -45,7 +45,7 @@ public class EditView extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
         String order;
-        order = "select * from records order by _id desc";
+        order = "select * from records order by date desc";
         Cursor c = mActivity.db.rawQuery(order, null);
         String[] from = {"date","activity"};
         int[] to = {R.id.text_date,R.id.text_activity};

@@ -183,8 +183,7 @@ public class MainActivity extends AppCompatActivity {
         mView.findViewById(R.id.btn18).setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v){
-                setData("その他");
-                Toast.makeText(mActivity, "その他を入力しました。", Toast.LENGTH_LONG).show();
+                selectAction18();
             }
         });
         //listview
@@ -401,7 +400,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void selectAction11(){
-        final CharSequence[] actions = {"座業","立ち仕事"};
+        final CharSequence[] actions = {"座業","立ち仕事","農作業"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("活動を選択してください");
         builder.setItems(actions, new DialogInterface.OnClickListener(){
@@ -445,7 +444,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void selectAction13(){
-        final CharSequence[] actions = {"知人と会う","会食"};
+        final CharSequence[] actions = {"SNS","知人と会う","会食"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("活動を選択してください");
         builder.setItems(actions, new DialogInterface.OnClickListener(){
@@ -490,6 +489,28 @@ public class MainActivity extends AppCompatActivity {
 
     private void selectAction15(){
         final CharSequence[] actions = {"観光","映画・美術鑑賞","娯楽施設","スポーツ観戦","その他の趣味","学習塾","習い事"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("活動を選択してください");
+        builder.setItems(actions, new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                setData(actions[which].toString());
+                Toast.makeText(mActivity, actions[which].toString()+"を入力しました。", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which){
+                //何もしない
+            }
+        });
+        builder.setCancelable(true);
+        builder.create();
+        builder.show();
+    }
+
+    private void selectAction18(){
+        final CharSequence[] actions = {"スマホ・PC・タブレット","ゲーム","その他"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("活動を選択してください");
         builder.setItems(actions, new DialogInterface.OnClickListener(){
@@ -565,7 +586,7 @@ public class MainActivity extends AppCompatActivity {
             file.createNewFile();
             CSVWriter csvWrite = new CSVWriter(new FileWriter(file));
             SQLiteDatabase db = mDBHelper.getReadableDatabase();
-            Cursor curCSV = db.rawQuery("SELECT * FROM records", null);
+            Cursor curCSV = db.rawQuery("SELECT * FROM records order by date desc", null);
             csvWrite.writeNext(curCSV.getColumnNames());
             while (curCSV.moveToNext()) {
                 String arrStr[] = {curCSV.getString(0), curCSV.getString(1), curCSV.getString(2), curCSV.getString(3)};
